@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GLHF</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cover">Cover</string>
+    <string name="titulo">Titulo</string>
+    <string name="desarrolladora">Desarrolladora</string>
+    <!-- DropdownMenu -->
+    <string-array name="juegos">
+        <item>Resident Evil 7</item>
+        <item>Rocket League</item>
+        <item>Forza Horizon 5</item>
+        <item>Genshin Impact</item>
+    </string-array>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="95dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Reinicio"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="69dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#FFFFFF"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/cover"
+                    android:layout_width="194dp"
+                    android:layout_height="319dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/cover"
+                    android:src="@drawable/f0" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:text="@string/titulo"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/desarrolladora"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/desarrolladora"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="111dp">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@android:style/Widget.DeviceDefault.Light.RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:indeterminate="false"
+                        android:isIndicator="true"
+                        android:max="2"
+                        android:numStars="5"
+                        android:progressTint="#FF0000"
+                        android:rating="5"
+
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <Button
+                        android:id="@+id/btnAñadirJugado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir a Juegos ya jugados"
+                        app:cornerRadius="10dp" />
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/btnFavoritos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Añadir a Favoritos"
+                    app:cornerRadius="10dp" />
+
+                <Button
+                    android:id="@+id/btnporJugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Añadir a Por Jugar"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
